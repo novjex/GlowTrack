@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* global.css */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  background: radial-gradient(125% 125% at 50% 100%, #000000 40%, #010133 100%);
+  background-attachment: fixed; /* <- makes the background stay in place */
+  background-repeat: no-repeat; /* optional, prevents tiling */
+  background-size: cover;       /* optional, ensures it covers the viewport */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the section has a fixed height and allows scrolling */
+.section-wrapper {
+  max-height: 80vh;  /* Adjust the height based on your preference */
+  overflow-y: auto;  /* Enables vertical scrolling */
+  padding-right: 10px;  /* Optional: to prevent clipping of content */
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
 }
