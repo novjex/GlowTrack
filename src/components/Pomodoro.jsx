@@ -6,7 +6,7 @@ import { doc, collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 
 export default function PomodoroPreviewCard() {
-  const [timeLeft, setTimeLeft] = useState(1 * 60);
+  const [timeLeft, setTimeLeft] = useState(25 * 60);
   const [isRunning, setIsRunning] = useState(false);
   const [taskName, setTaskName] = useState("");
   const [storedTask, setStoredTask] = useState("");
@@ -110,7 +110,7 @@ export default function PomodoroPreviewCard() {
 
   const resetTimer = () => {
     setIsRunning(false);
-    setTimeLeft(1 * 60);
+    setTimeLeft(25 * 60);
     setStoredTask("");
     setTaskName("");
     setIsTaskCompleted(false);
